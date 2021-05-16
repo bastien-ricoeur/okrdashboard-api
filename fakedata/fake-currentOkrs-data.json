@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "label": "Articles repostés",
+        "icon": "linkedin",
+        "completed": 2,
+        "total": 5
+    },
+    {
+        "id": 2,
+        "label": "Article rédigés",
+        "icon": "document",
+        "completed": 1,
+        "total": 2
+    },
+    {
+        "id": 3,
+        "label": "Brown bag lunch",
+        "icon": "pizza",
+        "completed": 1,
+        "total": 1
+    },
+    {
+        "id": 4,
+        "label": "Projets avec cahier de tests",
+        "icon": "checkmark",
+        "completed": 6,
+        "total": 7
+    }
+]

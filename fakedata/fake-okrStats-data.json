@@ -1,0 +1,56 @@
+{
+    "statistics": [
+        {
+            "label": "Articles repostés",
+            "data": [
+                3,
+                2,
+                5,
+                1,
+                8,
+                3
+            ]
+        },
+        {
+            "label": "Article rédigés",
+            "data": [
+                1,
+                0,
+                2,
+                4,
+                1,
+                3
+            ]
+        },
+        {
+            "label": "Brown bag lunch",
+            "data": [
+                0,
+                1,
+                0,
+                1,
+                2,
+                0
+            ]
+        },
+        {
+            "label": "Projets avec cahier de tests",
+            "data": [
+                2,
+                1,
+                3,
+                4,
+                2,
+                5
+            ]
+        }
+    ],
+    "labels": [
+        "Octobre",
+        "Novembre",
+        "Décembre",
+        "Janvier",
+        "Février",
+        "Mars"
+    ]
+}

@@ -1,0 +1,18 @@
+[
+    {
+        "label": "Production",
+        "data": 81
+    },
+    {
+        "label": "Interne",
+        "data": 10
+    },
+    {
+        "label": "Commercial",
+        "data": 6
+    },
+    {
+        "label": "Veille techno",
+        "data": 3
+    }
+]
