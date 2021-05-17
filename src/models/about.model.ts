@@ -2,21 +2,20 @@ import { ApiModel, ApiModelProperty } from "swagger-express-ts";
 
 @ApiModel({
   description: "About description",
-  name: "About"
+  name: "About",
 })
 export class AboutModel {
-
   @ApiModelProperty({
     description: "Version of the application",
     required: true,
-    example: '1.0.2'
+    example: "1.0.2",
   })
   version: string;
 
   @ApiModelProperty({
     description: "Environment of the application",
     required: true,
-    example: 'DEV'
+    example: "DEV",
   })
   environment: string;
 
