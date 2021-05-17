@@ -1,5 +1,6 @@
 import "reflect-metadata";
 
+import * as dotenv from "dotenv";
 import * as express from "express";
 import * as swagger from "swagger-express-ts";
 
@@ -13,7 +14,6 @@ import { AboutController } from "./controllers/about";
 import { Container } from "inversify";
 import { StatsController } from "./controllers/stats";
 
-import * as dotenv from "dotenv";
 dotenv.config();
 
 // set up container
@@ -30,7 +30,6 @@ container
   .to(StatsController)
   .inSingletonScope()
   .whenTargetNamed(StatsController.TARGET_NAME);
-
 
 // create server
 const server = new InversifyExpressServer(container);

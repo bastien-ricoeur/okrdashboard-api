@@ -39,6 +39,8 @@ export class AboutController implements interfaces.Controller {
     response: express.Response,
     _next: express.NextFunction
   ): void {
-    response.json(new AboutModel(process.env.APP_VERSION, process.env.APP_ENVIRONMENT));
+    response.json(
+      new AboutModel(process.env.APP_VERSION, process.env.APP_ENVIRONMENT)
+    );
   }
 }

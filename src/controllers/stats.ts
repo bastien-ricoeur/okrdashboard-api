@@ -5,11 +5,10 @@ import {
 } from "swagger-express-ts";
 import { controller, httpGet, interfaces } from "inversify-express-utils";
 
+import { WorkingTimeDistributionItemModel } from "../models/workingtime-distribution-item.model";
 import express from "express";
 import { injectable } from "inversify";
-
 import workingTimeDistributionFakeData from "../../fakedata/fake-wtDistribution-data.json";
-import { WorkingTimeDistributionItemModel } from "../models/workingtime-distribution-item.model";
 
 @ApiPath({
   path: "/stats",
@@ -42,6 +41,10 @@ export class StatsController implements interfaces.Controller {
     response: express.Response,
     _next: express.NextFunction
   ): void {
-    response.json(workingTimeDistributionFakeData.map((elt: any) => new WorkingTimeDistributionItemModel(elt.label, elt.data)));
+    response.json(
+      workingTimeDistributionFakeData.map(
+        (elt: any) => new WorkingTimeDistributionItemModel(elt.label, elt.data)
+      )
+    );
   }
 }
