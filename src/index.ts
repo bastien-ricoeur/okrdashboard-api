@@ -11,18 +11,26 @@ import {
 
 import { AboutController } from "./controllers/about";
 import { Container } from "inversify";
+import { StatsController } from "./controllers/stats";
 
-const port = 8080;
+import * as dotenv from "dotenv";
+dotenv.config();
 
 // set up container
 const container = new Container();
 
-// note that you *must* bind your controllers to Controller
 container
   .bind<interfaces.Controller>(TYPE.Controller)
   .to(AboutController)
   .inSingletonScope()
   .whenTargetNamed(AboutController.TARGET_NAME);
+
+container
+  .bind<interfaces.Controller>(TYPE.Controller)
+  .to(StatsController)
+  .inSingletonScope()
+  .whenTargetNamed(StatsController.TARGET_NAME);
+
 
 // create server
 const server = new InversifyExpressServer(container);
@@ -71,6 +79,6 @@ app.get("/", (_req, res) => {
   res.redirect("/api-docs/swagger");
 });
 
-app.listen(port, () =>
-  console.log(`server started at http://localhost:${port}`)
+app.listen(process.env.PORT, () =>
+  console.log(`server started at http://localhost:${process.env.PORT}`)
 );
