@@ -1,7 +1,7 @@
 import { ApiModel, ApiModelProperty } from "swagger-express-ts";
 
 @ApiModel({
-  description: "About description",
+  description: "About model",
   name: "About",
 })
 export class AboutModel {

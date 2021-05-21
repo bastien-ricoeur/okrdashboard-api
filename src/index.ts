@@ -13,6 +13,7 @@ import {
 import { AboutController } from "./controllers/about";
 import { Container } from "inversify";
 import { StatsController } from "./controllers/stats";
+import { OkrsController } from "./controllers/okrs";
 
 dotenv.config();
 
@@ -30,6 +31,12 @@ container
   .to(StatsController)
   .inSingletonScope()
   .whenTargetNamed(StatsController.TARGET_NAME);
+
+container
+  .bind<interfaces.Controller>(TYPE.Controller)
+  .to(OkrsController)
+  .inSingletonScope()
+  .whenTargetNamed(OkrsController.TARGET_NAME);
 
 // create server
 const server = new InversifyExpressServer(container);
