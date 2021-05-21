@@ -40,7 +40,13 @@ export class OkrModel {
   })
   total: number;
 
-  constructor(id: number, label: string, icon: string, completed: number, total: number) {
+  constructor(
+    id: number,
+    label: string,
+    icon: string,
+    completed: number,
+    total: number
+  ) {
     this.id = id;
     this.label = label;
     this.icon = icon;

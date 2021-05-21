@@ -5,12 +5,12 @@ import {
 } from "swagger-express-ts";
 import { controller, httpGet, interfaces } from "inversify-express-utils";
 
+import { OkrStatisticsModel } from "../models/okrs-statistics.model";
 import { WorkingTimeDistributionItemModel } from "../models/workingtime-distribution-item.model";
 import express from "express";
 import { injectable } from "inversify";
+import okrsStatisticsFakeData from "../../fakedata/fake-okrStats-data.json";
 import workingTimeDistributionFakeData from "../../fakedata/fake-wtDistribution-data.json";
-import okrsStatisticsFakeData from '../../fakedata/fake-okrStats-data.json';
-import { OkrStatisticsModel } from "../models/okrs-statistics.model";
 
 @ApiPath({
   path: "/stats",
@@ -72,7 +72,10 @@ export class StatsController implements interfaces.Controller {
     _next: express.NextFunction
   ): void {
     response.json(
-      new OkrStatisticsModel(okrsStatisticsFakeData.labels, okrsStatisticsFakeData.statistics)
+      new OkrStatisticsModel(
+        okrsStatisticsFakeData.labels,
+        okrsStatisticsFakeData.statistics
+      )
     );
   }
 }

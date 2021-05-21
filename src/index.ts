@@ -12,8 +12,8 @@ import {
 
 import { AboutController } from "./controllers/about";
 import { Container } from "inversify";
-import { StatsController } from "./controllers/stats";
 import { OkrsController } from "./controllers/okrs";
+import { StatsController } from "./controllers/stats";
 
 dotenv.config();
 
